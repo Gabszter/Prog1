@@ -26,7 +26,7 @@ struct D21 : B2 {
 };
 
 struct D22 : B2 {
-	int n= 358;
+	int n= 358cd;
 	void pvf() {cout << n << "\n";};
 };
 
