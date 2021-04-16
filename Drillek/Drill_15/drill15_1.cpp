@@ -12,8 +12,12 @@ double sloping_cos(double x) {return cos(x) + slope(x);}
 
 int main()
 try{
-
-	Point orig{xmax/2,ymax/2}
+	const int min=-10;
+	const int max=10;
+	const int points=400;
+	const int x_scal=20;
+	const int y_scal=20;
+	Point origo{300,300};
 	
 	Simple_window win(Point{100,100},600,600, "Function graphs");
 	win.wait_for_button();
@@ -27,18 +31,25 @@ try{
 	win.attach(y);
 	win.wait_for_button();
 
-	Function f1 {one, -10,11,Point{300,300},400,20,20};
+	Function f1 {one, min,max,origo,points,x_scal,y_scal};
 	win.attach(f1);
+	win.set_label("One");
 	win.wait_for_button();
-	Function f2 {slope, -10,11,Point{300,300},400,20,20};
+
+	Function f2 {slope, min,max,origo,points,x_scal,y_scal};
 	win.attach(f2);
+	win.set_label("Slope");
 	win.wait_for_button();
-	Function f3 {[](double x) {return x*x;}, -10,11,Point{300,300},400,20,20 };
+
+	Function f3 {cos, min,max,origo,points,x_scal,y_scal };
 	f3.set_color(Color::blue);
+	win.set_label("Square");
 	win.attach(f3);
 	win.wait_for_button();
-	Function f4 {[](double x) {return cos(x)*slope(x);}, -10,11,Point{300,300},400,20,20 };
+
+	Function f4 {sloping_cos, min,max,origo,points,x_scal,y_scal};
 	win.attach(f4);
+	win.set_label("Sloping_cos");
 	win.wait_for_button();
 
 }catch(exception& e){

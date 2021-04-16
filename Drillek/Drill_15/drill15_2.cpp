@@ -5,8 +5,8 @@ struct Person {
 	Person(string f,string l, int a);
 
 	string first_name() const {return first;}
-	string name() const {return first+last;}
 	string last_name() const {return last;}
+	string name() const {return first+last;}
 	int a() const {return age;}
 private:
 	string first;
@@ -58,15 +58,16 @@ try{
 	cout << "Give me name and age:";
 	cin >>p2;
 	cout << p2 << endl;
+	cout << endl;
 	vector<Person> p3;
-	cout << "Enter names and ages" << endl;
+	cout << "Enter 3 names and ages" << endl;
 	for(int i=0;i<3;++i)
 	{
 		Person vp;
 		cin >> vp;
 		p3.push_back(vp);
 	}
-	
+	cout << endl;
 
 	for(int i=0;i<3;i++) cout << p3[i] << endl;
 
