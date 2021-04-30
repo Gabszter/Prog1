@@ -10,23 +10,12 @@ public:
 	
 	S& operator=(const T&);
 
-	T& get();
-	const T& get() const;
+	T& get() {return val;}
+	const T& get() const {return val;}
 	void set(const T& v);
 private:
 	T val;
 };
-
-template<typename T>
-T& S<T>::get()
-{
-	return val;
-}
-template<typename T>
-const T& S<T>::get() const
-{
-	return val;
-}
 template<typename T>
 ostream& operator<<(ostream& os,vector<T>& v)
 {
@@ -139,11 +128,7 @@ try{
 	cout << "S_string: " << s_string.get() << endl;	 	
 	cout << endl;
 
-	cout << "Vector:" << "{ val, val, val }" << endl;
-	vector<int> vector1;
-	read_val(vector1);
-	S<vector<int>> s2_vector{vector1};
-	cout << s2_vector.get() << endl;
+	
 	
 	return 0;
 }catch(exception& e) {
