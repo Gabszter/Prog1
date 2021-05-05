@@ -1,0 +1,10 @@
+Camera 10 101.64
+Bike 9 900.64
+Tablet 8 1200.64
+Robot 7 600.73
+Guitar 6 400.73
+Pen 5 5.72
+Pc 4 2500.73
+Laptop 3 1973.62
+Mouse 2 300.73
+Key 1 90.74

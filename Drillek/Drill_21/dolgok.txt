@@ -1,0 +1,10 @@
+Camera 72
+Bike 91
+Tablet 51
+Robot 631
+Guitar 81
+Pen 94
+Pc 50
+Laptop 712
+Mouse 610
+Key 564
